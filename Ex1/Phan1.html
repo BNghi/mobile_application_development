@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Bai tap</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<style>
+		h1,h2 {
+			text-align: center;
+		}
+		div {
+			width: 20%;
+			margin: auto;
+		}
+		input {
+			margin: 1%;
+			height: 20px;
+		}
+		button {
+			margin: 5% 15% 0% 30%;
+			height: 30px;
+		}
+		span {
+			padding-right: 20px;
+		}
+		#lat {
+			margin-left: 15px;
+		}
+		p {
+			text-align: center;
+		}
+	</style>
+	</head>
+	<body>
+		<h1>Bài tập 1</h1>
+		<h2>Tọa độ:</h2>
+		<div>
+		<span>Lat:</span> <input type="text" id="lat"> <br>
+		<span>Long:</span> <input type="text" id="long"> <br>
+		<button>Xác định địa chỉ</button>
+		</div>
+		
+		<script type='text/javascript'>
+			$('document').ready(function(){				
+				$('button').click(function(){
+					var lat = $('#lat').val();
+					var lng = $('#long').val();
+					var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng="+lat+","+lng
+							 +"&key=AIzaSyAWlEIqkI-KanytyMIqdrr-7GFanQKlsmo"
+
+					$('p').remove();
+					console.log(url);
+					$.getJSON(url, function(data){
+						console.log(data);
+		
+							$('div').after("<p>"+data.results[0]['formatted_address']+"</p>")
+				
+					});
+				});
+			});
+			
+		</script>
+	</body>
+</html>
