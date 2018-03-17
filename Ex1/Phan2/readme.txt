@@ -1,0 +1,1 @@
+Request URL:http://localhost/RestController.php?a=latA,longA&b=latB,longB
