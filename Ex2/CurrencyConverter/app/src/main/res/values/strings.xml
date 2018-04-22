@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Currency Converter</string>
+    <string name="radio_vnd">VND</string>
+    <string name="message">Choose a currency</string>
+    <string name="radio_usd">USD</string>
+    <string name="radio_eur">EUR</string>
+    <string name="button_choose">Choose</string>
+    <string name="currency_hint">Enter number</string>
+    <string name="button_convert">Convert</string>
+    <string name="vnd_label">VND:</string>
+    <string name="usd_label">USD:</string>
+    <string name="eur_label">EUR:</string>
+    <string name="empty_error">Please enter number</string>
+    <string name="vnd" translatable="false">đồng</string>
+    <string name="usd" translatable="false">dollars</string>
+    <string name="eur" translatable="false">euros</string>
+</resources>
